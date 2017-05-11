@@ -4,8 +4,7 @@
 >
 >对于我前面所说的那位同学提的问题[UIcollectionView 如何设置 每个section (不是cell) 不同背景图片](http://www.cocoachina.com/bbs/read.php?tid-253145-page-1.html)如何从文档中找到解决的办法？
 >
->首先我们点击 `Command` 键 + `UICollectionView`
->这个类看看接口，通常来说接口中会透露出它的大部分属性已经相关方法。如下所示：
+>首先我们点击 `Command` 键 + `UICollectionView`这个类看看接口，通常来说接口中会透露出它的大部分属性已经相关方法。如下所示：
 >![](http://upload-images.jianshu.io/upload_images/2926059-604fe80751f31aa0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 >
 >当然上面只是截图的一部分，但是我们往下看会发现这两个方法:
