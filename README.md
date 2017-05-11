@@ -4,7 +4,7 @@
 >
 >对于我前面所说的那位同学提的问题[UIcollectionView 如何设置 每个section (不是cell) 不同背景图片](http://www.cocoachina.com/bbs/read.php?tid-253145-page-1.html)如何从文档中找到解决的办法？
 >
->首先我们点击 `Command` 键 + `UICollectionView`这个类看看接口，通常来说接口中会透露出它的大部分属性已经相关方法。如下所示：
+>首先我们点击 `Command` 键 + `UICollectionView`这个类看看接口，通常来说接口中会透露出它的大部分属性和相关方法。如下所示：
 >![](http://upload-images.jianshu.io/upload_images/2926059-604fe80751f31aa0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 >
 >当然上面只是截图的一部分，但是我们往下看会发现这两个方法:
@@ -22,7 +22,7 @@
 >这时我们会看见苹果官方的一个描述说明图:
 >![](http://upload-images.jianshu.io/upload_images/2926059-4d456a128f817d6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 >
->看到这里然后结合，上面所找到的方法，我想可以猜测这个函数是干嘛的了，如果你再找找方法中的`elementKind`就可以基本确定这个函数可以解决您的问题。
+>看到这里然后结合上面所找到的方法，我想可以猜测这个函数是干嘛的了，如果你再找找方法中的`elementKind`就可以基本确定这个函数可以解决您的问题。
 >
 >```
 >UIKIT_EXTERN NSString *const UICollectionElementKindSectionHeader NS_AVAILABLE_IOS(6_0); 
