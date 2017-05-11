@@ -1,10 +1,84 @@
-//
-//  ZHRootViewController.m
-//  CollectionView
-//
-//  Created by aimoke on 2017/5/11.
-//  Copyright © 2017年 zhuo. All rights reserved.
-//
+>为何写这个Demo讲述UICollectionView 的基本使用。事情要从13年时有人问[UIcollectionView 如何设置 每个section (不是cell) 不同背景图片](http://www.cocoachina.com/bbs/read.php?tid-253145-page-1.html)由于他说是新人刚接触iOS开发，我就回答让他先看看苹果接口文档，并截了图（虽然图片已经挂了），本来是告诉新人遇到问题后应该怎么解决问题的思路。文档可以解决90%的问题，而不是一遇到问题马上提问或者寻找现成代码。但是后来的一群想找寻答案的人一看没代码，马上露出没教养的本性，马上开骂。有朋友在后面回复说，教的是渔不是鱼 ，也被骂。当时并没和这群没教养的人说话，今天再次登录CocoaChina发现还有没教养的人在这叽歪，实在忍不住，希望学习开发的人员养成一个看文档的好习惯，提问不要没教养。
+
+>作为一个程序员，如果说文档看都没看，不自己先尝试解决问题，直接百度搜索答案Copy现成代码，我想这样的程序员也高明不到哪里去，学习能力为负数，HR,CTO特别需要注意是否招这种人进公司。
+
+对于我前面所说的那位同学提的问题[UIcollectionView 如何设置 每个section (不是cell) 不同背景图片](http://www.cocoachina.com/bbs/read.php?tid-253145-page-1.html)如何从文档中找到解决的办法？
+
+首先我们点击 `Command` 键 + `UICollectionView`
+这个类看看接口，通常来说接口中会透露出它的大部分属性已经相关方法。如下所示：
+![](http://upload-images.jianshu.io/upload_images/2926059-604fe80751f31aa0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+当然上面只是截图的一部分，但是我们往下看会发现这两个方法:
+
+```objective-c
+- (void)registerClass:(nullable Class)viewClass forSupplementaryViewOfKind:(NSString *)elementKind withReuseIdentifier:(NSString *)identifier;
+- (void)registerNib:(nullable UINib *)nib forSupplementaryViewOfKind:(NSString *)kind withReuseIdentifier:(NSString *)identifier; ​
+```
+
+其中一个关键字：`Supplementary` 字面意思是附属，补充，增补物。看到这里也许你还是不太明白这个是干什么的，没关系，我们继续看苹果的文档说明，在刚才你点进去的地方选择`UICollectionView`并按住`Command`键点击`Class Reference`查看详细说明文档，如下图所示：
+
+![](http://upload-images.jianshu.io/upload_images/2926059-424547b780c7bd8c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+这时我们会看见苹果官方的一个描述说明图:
+![](http://upload-images.jianshu.io/upload_images/2926059-4d456a128f817d6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+看到这里然后结合，上面所找到的方法，我想可以猜测这个函数是干嘛的了，如果你再找找方法中的`elementKind`就可以基本确定这个函数可以解决您的问题。
+
+```
+UIKIT_EXTERN NSString *const UICollectionElementKindSectionHeader NS_AVAILABLE_IOS(6_0); 
+UIKIT_EXTERN NSString *const UICollectionElementKindSectionFooter NS_AVAILABLE_IOS(6_0);
+```
+
+找到解决方法后，如何实现？
+
+*  新建一个工程例如XXXX。我这里叫`CollectionView`在`storyboard`中拉取一`Collection view`至初始化的`Controller`中,然后对里面的`Collection view cell`自定义。如下图所示:
+
+![](http://upload-images.jianshu.io/upload_images/2926059-94a13aee799e5356.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+* 新建一个继承`UICollectionViewCell`的 `ZHCollectionViewCell`并建立与上面中的`Collection view cell`属性关联。
+
+```
+@interface ZHCollectionViewCell : UICollectionViewCell 
+@property (weak, nonatomic) IBOutlet UIImageView *showImgView; 
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel; ​ 
+@end
+```
+
+* 新建一个继承与`UICollectionReusableView`的`ZHCollectionReusableView`来展示`Header`这里我们带`Xib`
+
+
+```
+@interface ZHCollectionReusableView : UICollectionReusableView
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+
+@end
+
+@implementation ZHCollectionReusableView
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.contentLabel.textColor = [UIColor redColor];
+    self.backgroundColor = [UIColor blueColor];
+    // Initialization code
+}
+
+```
+
+* 新建`ZHCollectionViewCell`数据来源`Model`
+
+```
+@interface ZHCollectionModel : NSObject
+@property (nonatomic, strong) NSString *imgName;
+@property (nonatomic, strong) NSString *title;
+
+@end
+
+```
+
+* `UICollectionView`初始化和实现，具体看注释
+
+```
 
 #import "ZHRootViewController.h"
 #import "ZHCollectionModel.h"
@@ -124,16 +198,4 @@
     UIImage *img = [UIImage imageWithContentsOfFile:path];
     return img;
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-@end
+```
