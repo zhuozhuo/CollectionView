@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ZHCollectionViewFlowLayout;
 
 @interface ZHRootViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *showCollectionView;
-@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *collectionViewLayout;
+@property (weak, nonatomic) IBOutlet ZHCollectionViewFlowLayout *collectionViewLayout;
 @property (nonatomic, strong) NSArray *models;
 @end

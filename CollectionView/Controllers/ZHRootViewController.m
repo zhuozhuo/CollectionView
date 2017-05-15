@@ -9,7 +9,9 @@
 #import "ZHRootViewController.h"
 #import "ZHCollectionModel.h"
 #import "ZHCollectionViewCell.h"
-#import "ZHCollectionReusableView.h"
+#import "ZHHeaderCollectionReusableView.h"
+#import "ZHDecorationCollectionReusableView.h"
+#import "ZHCollectionViewFlowLayout.h"
 
 @interface ZHRootViewController ()
 
@@ -47,7 +49,8 @@
     [self initialModels];// 获取数据源
     self.showCollectionView.delegate = self;
     self.showCollectionView.dataSource = self;
-    [self.showCollectionView registerNib:[UINib nibWithNibName:@"ZHCollectionReusableView" bundle:[NSBundle mainBundle]] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"ZHCollectionReusableView"];//注册SectionHeader复用
+    [self.showCollectionView registerNib:[UINib nibWithNibName:@"ZHHeaderCollectionReusableView" bundle:[NSBundle mainBundle]] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"ZHHeaderCollectionReusableView"];//注册SectionHeader复用
+    
     
     // Do any additional setup after loading the view.
 }
@@ -101,7 +104,7 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     if (kind == UICollectionElementKindSectionHeader) {
-        ZHCollectionReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"ZHCollectionReusableView" forIndexPath:indexPath];
+        ZHHeaderCollectionReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"ZHHeaderCollectionReusableView" forIndexPath:indexPath];
         header.contentLabel.text = [NSString stringWithFormat:@"Header%ld",indexPath.section];
         return header;
     }

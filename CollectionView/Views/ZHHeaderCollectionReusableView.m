@@ -6,9 +6,9 @@
 //  Copyright © 2017年 zhuo. All rights reserved.
 //
 
-#import "ZHCollectionReusableView.h"
+#import "ZHHeaderCollectionReusableView.h"
 
-@implementation ZHCollectionReusableView
+@implementation ZHHeaderCollectionReusableView
 
 - (void)awakeFromNib {
     [super awakeFromNib];

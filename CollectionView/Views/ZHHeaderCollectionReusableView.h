@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZHCollectionReusableView : UICollectionReusableView
+@interface ZHHeaderCollectionReusableView : UICollectionReusableView
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 
 @end

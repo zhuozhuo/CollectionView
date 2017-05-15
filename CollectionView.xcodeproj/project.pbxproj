@@ -25,8 +25,14 @@
 		9E55A38B1EC40C220016B92C /* img6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E55A3831EC40C220016B92C /* img6.jpg */; };
 		9E55A38C1EC40C220016B92C /* img7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E55A3841EC40C220016B92C /* img7.jpg */; };
 		9E55A38D1EC40C220016B92C /* img8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E55A3851EC40C220016B92C /* img8.jpg */; };
-		9E55A3911EC40E870016B92C /* ZHCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E55A38F1EC40E870016B92C /* ZHCollectionReusableView.m */; };
-		9E55A3921EC40E870016B92C /* ZHCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E55A3901EC40E870016B92C /* ZHCollectionReusableView.xib */; };
+		9E55A3911EC40E870016B92C /* ZHHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E55A38F1EC40E870016B92C /* ZHHeaderCollectionReusableView.m */; };
+		9E55A3921EC40E870016B92C /* ZHHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E55A3901EC40E870016B92C /* ZHHeaderCollectionReusableView.xib */; };
+		9E6F14731EC93EDB00919A13 /* ZHDecorationCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6F14711EC93EDB00919A13 /* ZHDecorationCollectionReusableView.m */; };
+		9E6F14741EC93EDB00919A13 /* ZHDecorationCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E6F14721EC93EDB00919A13 /* ZHDecorationCollectionReusableView.xib */; };
+		9E6F147C1EC943B200919A13 /* ZHCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6F147B1EC943B200919A13 /* ZHCollectionViewFlowLayout.m */; };
+		9E6F14851EC956A300919A13 /* ZHDecorationCollectionReusableView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6F14831EC956A300919A13 /* ZHDecorationCollectionReusableView1.m */; };
+		9E6F14861EC956A300919A13 /* ZHDecorationCollectionReusableView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E6F14841EC956A300919A13 /* ZHDecorationCollectionReusableView1.xib */; };
+		9E6F14881EC958C200919A13 /* decoration1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E6F14871EC958C200919A13 /* decoration1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,9 +81,18 @@
 		9E55A3831EC40C220016B92C /* img6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img6.jpg; sourceTree = "<group>"; };
 		9E55A3841EC40C220016B92C /* img7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img7.jpg; sourceTree = "<group>"; };
 		9E55A3851EC40C220016B92C /* img8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img8.jpg; sourceTree = "<group>"; };
-		9E55A38E1EC40E870016B92C /* ZHCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHCollectionReusableView.h; sourceTree = "<group>"; };
-		9E55A38F1EC40E870016B92C /* ZHCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHCollectionReusableView.m; sourceTree = "<group>"; };
-		9E55A3901EC40E870016B92C /* ZHCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZHCollectionReusableView.xib; sourceTree = "<group>"; };
+		9E55A38E1EC40E870016B92C /* ZHHeaderCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHHeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		9E55A38F1EC40E870016B92C /* ZHHeaderCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHHeaderCollectionReusableView.m; sourceTree = "<group>"; };
+		9E55A3901EC40E870016B92C /* ZHHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZHHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		9E6F14701EC93EDB00919A13 /* ZHDecorationCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHDecorationCollectionReusableView.h; sourceTree = "<group>"; };
+		9E6F14711EC93EDB00919A13 /* ZHDecorationCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHDecorationCollectionReusableView.m; sourceTree = "<group>"; };
+		9E6F14721EC93EDB00919A13 /* ZHDecorationCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZHDecorationCollectionReusableView.xib; sourceTree = "<group>"; };
+		9E6F147A1EC943B200919A13 /* ZHCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		9E6F147B1EC943B200919A13 /* ZHCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		9E6F14821EC956A300919A13 /* ZHDecorationCollectionReusableView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHDecorationCollectionReusableView1.h; sourceTree = "<group>"; };
+		9E6F14831EC956A300919A13 /* ZHDecorationCollectionReusableView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHDecorationCollectionReusableView1.m; sourceTree = "<group>"; };
+		9E6F14841EC956A300919A13 /* ZHDecorationCollectionReusableView1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZHDecorationCollectionReusableView1.xib; sourceTree = "<group>"; };
+		9E6F14871EC958C200919A13 /* decoration1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = decoration1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,9 +207,17 @@
 			children = (
 				9E55A3761EC407B10016B92C /* ZHCollectionViewCell.h */,
 				9E55A3771EC407B10016B92C /* ZHCollectionViewCell.m */,
-				9E55A38E1EC40E870016B92C /* ZHCollectionReusableView.h */,
-				9E55A38F1EC40E870016B92C /* ZHCollectionReusableView.m */,
-				9E55A3901EC40E870016B92C /* ZHCollectionReusableView.xib */,
+				9E55A38E1EC40E870016B92C /* ZHHeaderCollectionReusableView.h */,
+				9E55A38F1EC40E870016B92C /* ZHHeaderCollectionReusableView.m */,
+				9E55A3901EC40E870016B92C /* ZHHeaderCollectionReusableView.xib */,
+				9E6F147A1EC943B200919A13 /* ZHCollectionViewFlowLayout.h */,
+				9E6F147B1EC943B200919A13 /* ZHCollectionViewFlowLayout.m */,
+				9E6F14701EC93EDB00919A13 /* ZHDecorationCollectionReusableView.h */,
+				9E6F14711EC93EDB00919A13 /* ZHDecorationCollectionReusableView.m */,
+				9E6F14721EC93EDB00919A13 /* ZHDecorationCollectionReusableView.xib */,
+				9E6F14821EC956A300919A13 /* ZHDecorationCollectionReusableView1.h */,
+				9E6F14831EC956A300919A13 /* ZHDecorationCollectionReusableView1.m */,
+				9E6F14841EC956A300919A13 /* ZHDecorationCollectionReusableView1.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,6 +233,7 @@
 		9E55A37D1EC40C220016B92C /* Imgs */ = {
 			isa = PBXGroup;
 			children = (
+				9E6F14871EC958C200919A13 /* decoration1.jpg */,
 				9E55A37E1EC40C220016B92C /* img1.jpg */,
 				9E55A37F1EC40C220016B92C /* img2.jpg */,
 				9E55A3801EC40C220016B92C /* img3.jpg */,
@@ -333,12 +357,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E55A3891EC40C220016B92C /* img4.jpg in Resources */,
+				9E6F14881EC958C200919A13 /* decoration1.jpg in Resources */,
 				9E55A38C1EC40C220016B92C /* img7.jpg in Resources */,
 				9E55A38A1EC40C220016B92C /* img5.jpg in Resources */,
 				9E55A34D1EC406120016B92C /* LaunchScreen.storyboard in Resources */,
 				9E55A3881EC40C220016B92C /* img3.jpg in Resources */,
-				9E55A3921EC40E870016B92C /* ZHCollectionReusableView.xib in Resources */,
+				9E55A3921EC40E870016B92C /* ZHHeaderCollectionReusableView.xib in Resources */,
+				9E6F14741EC93EDB00919A13 /* ZHDecorationCollectionReusableView.xib in Resources */,
 				9E55A38B1EC40C220016B92C /* img6.jpg in Resources */,
+				9E6F14861EC956A300919A13 /* ZHDecorationCollectionReusableView1.xib in Resources */,
 				9E55A3871EC40C220016B92C /* img2.jpg in Resources */,
 				9E55A38D1EC40C220016B92C /* img8.jpg in Resources */,
 				9E55A3861EC40C220016B92C /* img1.jpg in Resources */,
@@ -370,9 +397,12 @@
 			files = (
 				9E55A3421EC406120016B92C /* AppDelegate.m in Sources */,
 				9E55A33F1EC406120016B92C /* main.m in Sources */,
+				9E6F14851EC956A300919A13 /* ZHDecorationCollectionReusableView1.m in Sources */,
+				9E6F14731EC93EDB00919A13 /* ZHDecorationCollectionReusableView.m in Sources */,
 				9E55A3781EC407B10016B92C /* ZHCollectionViewCell.m in Sources */,
-				9E55A3911EC40E870016B92C /* ZHCollectionReusableView.m in Sources */,
+				9E55A3911EC40E870016B92C /* ZHHeaderCollectionReusableView.m in Sources */,
 				9E55A3751EC407860016B92C /* ZHRootViewController.m in Sources */,
+				9E6F147C1EC943B200919A13 /* ZHCollectionViewFlowLayout.m in Sources */,
 				9E55A37B1EC407DB0016B92C /* ZHCollectionModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,6 +641,7 @@
 				9E55A3691EC406120016B92C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E55A36A1EC406120016B92C /* Build configuration list for PBXNativeTarget "CollectionViewTests" */ = {
 			isa = XCConfigurationList;
@@ -619,6 +650,7 @@
 				9E55A36C1EC406120016B92C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E55A36D1EC406120016B92C /* Build configuration list for PBXNativeTarget "CollectionViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -627,6 +659,7 @@
 				9E55A36F1EC406120016B92C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

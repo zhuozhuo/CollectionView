@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="ZHCollectionReusableView">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="ZHHeaderCollectionReusableView">
             <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
@@ -28,7 +28,7 @@
                 <constraint firstItem="fhd-ex-X07" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="lu3-eu-tvc"/>
             </constraints>
             <connections>
-                <outlet property="contentLabel" destination="fhd-ex-X07" id="XKB-cA-QlR"/>
+                <outlet property="contentLabel" destination="fhd-ex-X07" id="Qsh-DZ-O4n"/>
             </connections>
             <point key="canvasLocation" x="25" y="71.5"/>
         </collectionReusableView>
